@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F9767A5-6B62-4A33-AEF5-CE1437794F32}</ProjectGuid>
+    <ProjectGuid>{A7F36B75-8AC7-4ABD-81F6-EBD79053F07A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MsdnTutorial.PictureViewer</RootNamespace>
-    <AssemblyName>MsdnTutorial.PictureViewer</AssemblyName>
+    <RootNamespace>MathQuiz</RootNamespace>
+    <AssemblyName>MathQuiz</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -79,9 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\puppy-dog.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

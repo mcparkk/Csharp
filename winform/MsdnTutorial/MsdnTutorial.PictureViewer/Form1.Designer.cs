@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.ptbDog = new System.Windows.Forms.PictureBox();
+            this.ptbImage = new System.Windows.Forms.PictureBox();
             this.chbStretch = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnBackground = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbDog)).BeginInit();
+            this.ofdOpen = new System.Windows.Forms.OpenFileDialog();
+            this.cldBackcolor = new System.Windows.Forms.ColorDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ptbDog
+            // ptbImage
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.ptbDog, 2);
-            this.ptbDog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptbDog.Image = ((System.Drawing.Image)(resources.GetObject("ptbDog.Image")));
-            this.ptbDog.Location = new System.Drawing.Point(3, 3);
-            this.ptbDog.Name = "ptbDog";
-            this.ptbDog.Size = new System.Drawing.Size(612, 309);
-            this.ptbDog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbDog.TabIndex = 2;
-            this.ptbDog.TabStop = false;
+            this.tableLayoutPanel1.SetColumnSpan(this.ptbImage, 2);
+            this.ptbImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbImage.Image = ((System.Drawing.Image)(resources.GetObject("ptbImage.Image")));
+            this.ptbImage.Location = new System.Drawing.Point(3, 3);
+            this.ptbImage.Name = "ptbImage";
+            this.ptbImage.Size = new System.Drawing.Size(612, 309);
+            this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbImage.TabIndex = 2;
+            this.ptbImage.TabStop = false;
             // 
             // chbStretch
             // 
@@ -74,7 +76,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel1.Controls.Add(this.chbStretch, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ptbDog, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ptbImage, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -87,8 +89,8 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.btnShow);
+            this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Controls.Add(this.btnBackground);
             this.flowLayoutPanel1.Controls.Add(this.btnClose);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -98,23 +100,25 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(520, 29);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // button1
+            // btnShow
             // 
-            this.button1.Location = new System.Drawing.Point(442, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnShow.Location = new System.Drawing.Point(442, 3);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(75, 23);
+            this.btnShow.TabIndex = 0;
+            this.btnShow.Text = "&Show";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.BtnShow_Click);
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Location = new System.Drawing.Point(361, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(361, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // btnBackground
             // 
@@ -124,6 +128,7 @@
             this.btnBackground.TabIndex = 2;
             this.btnBackground.Text = "&Background";
             this.btnBackground.UseVisualStyleBackColor = true;
+            this.btnBackground.Click += new System.EventHandler(this.BtnBackground_Click);
             // 
             // btnClose
             // 
@@ -135,16 +140,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // ofdOpen
+            // 
+            this.ofdOpen.FileName = "openFileDialog1";
+            this.ofdOpen.Filter = "jpeg files|*.jpg";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 350);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Location = new System.Drawing.Point(3, 3);
             this.Name = "Form1";
             this.Text = "사진 뷰어";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbDog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -154,14 +165,16 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox ptbDog;
+        private System.Windows.Forms.PictureBox ptbImage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.CheckBox chbStretch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBackground;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.OpenFileDialog ofdOpen;
+        private System.Windows.Forms.ColorDialog cldBackcolor;
     }
 }
 

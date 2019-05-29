@@ -27,14 +27,38 @@ namespace MsdnTutorial.PictureViewer
         private void ChbStretch_CheckedChanged(object sender, EventArgs e)
         {
             if (chbStretch.Checked)
-                ptbDog.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptbImage.SizeMode = PictureBoxSizeMode.StretchImage;
             else
-                ptbDog.SizeMode = PictureBoxSizeMode.Normal;
+                ptbImage.SizeMode = PictureBoxSizeMode.Normal;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BtnBackground_Click(object sender, EventArgs e)
+        {
+            if (cldBackcolor.ShowDialog() != DialogResult.OK)
+                return;
+
+            ptbImage.BackColor = cldBackcolor.Color;
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            ptbImage.Image = null;
+        }
+
+        private void BtnShow_Click(object sender, EventArgs e)
+        {
+            DialogResult result = ofdOpen.ShowDialog();
+
+            if (result != DialogResult.OK)
+                return;
+
+            ptbImage.Load(ofdOpen.FileName);
+            
         }
     }
 }
