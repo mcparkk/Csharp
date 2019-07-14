@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
 {
     public partial class YouTubeSearch : Form
     {
+       
         public YouTubeSearch()
         {
             InitializeComponent();
@@ -23,6 +24,8 @@ namespace WindowsFormsApp1
 
         async void BtnSearch_Click(object sender, EventArgs e)
         {
+            lsvResult.Clear();
+
             YouTubeService youtube = new YouTubeService
                 (new BaseClientService.Initializer()
                 {
@@ -32,7 +35,7 @@ namespace WindowsFormsApp1
 
             var request = youtube.Search.List("snippet");
             request.Q = txtSearch.Text;
-            request.MaxResults = 25;
+            request.MaxResults = 10;
 
             var result = await request.ExecuteAsync();
 
@@ -40,9 +43,37 @@ namespace WindowsFormsApp1
             {
                 if (item.Id.Kind == "youtube#video")
                 {
-                    lsvResult.Items.Add(item.Id.VideoId.ToString(), item.Snippet.Title, 0);
+               
+                   //var item = (Google.Apis.YouTube.v3.Data.SearchResult)e.Result;
+                   lsvResult.Items.Add(item.Id.VideoId.ToString(), item.Snippet.Title, 0);
+
                 }
+                   BgwWorker.ReportProgress(10);
+                
             }
+            
+        }
+        //private void Bgw_DoWork(object sender, DoWorkEventArgs e)
+        //{
+
+        //}
+
+        private void Bgw_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            SetProgress(e.ProgressPercentage);
+        }
+        //private void Bgw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        //{
+
+        //    ResetProgressValue();
+        //}
+
+        private void SetProgress(int value)
+        {
+            if (TspProgress.Value == 100)
+                ResetProgressValue();
+
+            TspProgress.Value += value;
         }
 
         private void LsvResult_DoubleClick(object sender, EventArgs e)
@@ -56,10 +87,18 @@ namespace WindowsFormsApp1
                 // 디폴트 브라우져에서 실행
                 Process.Start(youtubeUrl);
 
-                
             }
         }
-        
-        
+        private void ResetProgressValue()
+        {
+            TspProgress.Value = 0;
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            lsvResult.Clear();
+            txtSearch.Clear();
+            TspProgress.Value = 0;
+        }
     }
 }

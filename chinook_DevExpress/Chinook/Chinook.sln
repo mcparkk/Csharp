@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook", "Chinook\Chinook.csproj", "{56193EBE-EF8E-4779-97E9-F46B72D800DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook.Data", "Chinook.Data\Chinook.Data.csproj", "{D70B2E01-AD8B-41A6-A49A-BD4629BE4580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook.TestConsole", "Chinook.TestConsole\Chinook.TestConsole.csproj", "{1FF68201-F32C-494B-9E9E-C5B9E2372090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook.UnitTest", "Chinook.UnitTest\Chinook.UnitTest.csproj", "{C48BE8FD-E889-4389-A1C2-D627691C9B55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F6A1E771-F97E-45D1-972D-EA266B7EF8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLibrary\MyLibrary.csproj", "{851D015A-253A-47B1-9357-7D5F34ADF24D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56193EBE-EF8E-4779-97E9-F46B72D800DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56193EBE-EF8E-4779-97E9-F46B72D800DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56193EBE-EF8E-4779-97E9-F46B72D800DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56193EBE-EF8E-4779-97E9-F46B72D800DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70B2E01-AD8B-41A6-A49A-BD4629BE4580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70B2E01-AD8B-41A6-A49A-BD4629BE4580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70B2E01-AD8B-41A6-A49A-BD4629BE4580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70B2E01-AD8B-41A6-A49A-BD4629BE4580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF68201-F32C-494B-9E9E-C5B9E2372090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF68201-F32C-494B-9E9E-C5B9E2372090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF68201-F32C-494B-9E9E-C5B9E2372090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF68201-F32C-494B-9E9E-C5B9E2372090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C48BE8FD-E889-4389-A1C2-D627691C9B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48BE8FD-E889-4389-A1C2-D627691C9B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48BE8FD-E889-4389-A1C2-D627691C9B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48BE8FD-E889-4389-A1C2-D627691C9B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851D015A-253A-47B1-9357-7D5F34ADF24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851D015A-253A-47B1-9357-7D5F34ADF24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851D015A-253A-47B1-9357-7D5F34ADF24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851D015A-253A-47B1-9357-7D5F34ADF24D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1FF68201-F32C-494B-9E9E-C5B9E2372090} = {F6A1E771-F97E-45D1-972D-EA266B7EF8FF}
+		{C48BE8FD-E889-4389-A1C2-D627691C9B55} = {F6A1E771-F97E-45D1-972D-EA266B7EF8FF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97CFACC4-74D9-4D69-A272-4155B9917521}
+	EndGlobalSection
+EndGlobal

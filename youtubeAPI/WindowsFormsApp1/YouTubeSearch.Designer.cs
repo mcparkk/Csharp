@@ -34,18 +34,21 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lsvResult = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.BgwWorker = new System.ComponentModel.BackgroundWorker();
+            this.TspProgress = new System.Windows.Forms.ProgressBar();
+            this.BtnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(21, 24);
+            this.txtSearch.Location = new System.Drawing.Point(21, 27);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(340, 25);
             this.txtSearch.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(381, 26);
+            this.btnSearch.Location = new System.Drawing.Point(367, 26);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -57,10 +60,10 @@
             // 
             this.lsvResult.AllowColumnReorder = true;
             this.lsvResult.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lsvResult.Location = new System.Drawing.Point(5, 77);
+            this.lsvResult.Location = new System.Drawing.Point(5, 100);
             this.lsvResult.Name = "lsvResult";
             this.lsvResult.ShowItemToolTips = true;
-            this.lsvResult.Size = new System.Drawing.Size(462, 370);
+            this.lsvResult.Size = new System.Drawing.Size(536, 370);
             this.lsvResult.SmallImageList = this.imageList1;
             this.lsvResult.TabIndex = 2;
             this.lsvResult.UseCompatibleStateImageBehavior = false;
@@ -73,11 +76,35 @@
             this.imageList1.TransparentColor = System.Drawing.Color.White;
             this.imageList1.Images.SetKeyName(0, "puppy-dog.jpg");
             // 
+            // BgwWorker
+            // 
+            this.BgwWorker.WorkerReportsProgress = true;
+            this.BgwWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Bgw_ProgressChanged);
+            // 
+            // TspProgress
+            // 
+            this.TspProgress.Location = new System.Drawing.Point(21, 58);
+            this.TspProgress.Name = "TspProgress";
+            this.TspProgress.Size = new System.Drawing.Size(501, 23);
+            this.TspProgress.TabIndex = 3;
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.Location = new System.Drawing.Point(449, 26);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(75, 24);
+            this.BtnReset.TabIndex = 4;
+            this.BtnReset.Text = "Reset";
+            this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
             // YouTubeSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 452);
+            this.ClientSize = new System.Drawing.Size(546, 475);
+            this.Controls.Add(this.BtnReset);
+            this.Controls.Add(this.TspProgress);
             this.Controls.Add(this.lsvResult);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -95,6 +122,9 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView lsvResult;
         private System.Windows.Forms.ImageList imageList1;
+        private System.ComponentModel.BackgroundWorker BgwWorker;
+        private System.Windows.Forms.ProgressBar TspProgress;
+        private System.Windows.Forms.Button BtnReset;
     }
 }
 

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56193EBE-EF8E-4779-97E9-F46B72D800DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Chinook</RootNamespace>
+    <AssemblyName>Chinook</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseControls\EntityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControls\EntityControl.Designer.cs">
+      <DependentUpon>EntityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\EntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\EntityForm.Designer.cs">
+      <DependentUpon>EntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompositeControls\CheckableComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompositeControls\CheckableComboBox.Designer.cs">
+      <DependentUpon>CheckableComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlbumControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AlbumControl.Designer.cs">
+      <DependentUpon>AlbumControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlbumListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AlbumListControl.Designer.cs">
+      <DependentUpon>AlbumListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AlbumSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AlbumSearchControl.Designer.cs">
+      <DependentUpon>AlbumSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumChartForm.Designer.cs">
+      <DependentUpon>AlbumChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumForm.Designer.cs">
+      <DependentUpon>AlbumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumForm2.Designer.cs">
+      <DependentUpon>AlbumForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumListForm.Designer.cs">
+      <DependentUpon>AlbumListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlbumListForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlbumListForm2.Designer.cs">
+      <DependentUpon>AlbumListForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplatePracticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplatePracticeForm.Designer.cs">
+      <DependentUpon>TemplatePracticeForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForms\EntityForm.resx">
+      <DependentUpon>EntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompositeControls\CheckableComboBox.resx">
+      <DependentUpon>CheckableComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AlbumControl.resx">
+      <DependentUpon>AlbumControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AlbumListControl.resx">
+      <DependentUpon>AlbumListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AlbumSearchControl.resx">
+      <DependentUpon>AlbumSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumChartForm.resx">
+      <DependentUpon>AlbumChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumForm.resx">
+      <DependentUpon>AlbumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumForm2.resx">
+      <DependentUpon>AlbumForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumListForm.resx">
+      <DependentUpon>AlbumListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AlbumListForm2.resx">
+      <DependentUpon>AlbumListForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TemplatePracticeForm.resx">
+      <DependentUpon>TemplatePracticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Chinook.Data.Album.datasource" />
+    <None Include="Properties\DataSources\Chinook.Data.Artist.datasource" />
+    <None Include="Properties\DataSources\Chinook.Data.Models.AlbumModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Data\Chinook.Data.csproj">
+      <Project>{D70B2E01-AD8B-41A6-A49A-BD4629BE4580}</Project>
+      <Name>Chinook.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chinook.TestConsole\Chinook.TestConsole.csproj">
+      <Project>{1ff68201-f32c-494b-9e9e-c5b9e2372090}</Project>
+      <Name>Chinook.TestConsole</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLibrary\MyLibrary\MyLibrary.csproj">
+      <Project>{851d015a-253a-47b1-9357-7d5f34adf24d}</Project>
+      <Name>MyLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
