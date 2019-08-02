@@ -41,16 +41,18 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(21, 27);
+            this.txtSearch.Location = new System.Drawing.Point(21, 32);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(340, 25);
+            this.txtSearch.Size = new System.Drawing.Size(340, 26);
             this.txtSearch.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(367, 26);
+            this.btnSearch.Location = new System.Drawing.Point(367, 31);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(75, 28);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -60,10 +62,11 @@
             // 
             this.lsvResult.AllowColumnReorder = true;
             this.lsvResult.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lsvResult.Location = new System.Drawing.Point(5, 100);
+            this.lsvResult.Location = new System.Drawing.Point(5, 124);
+            this.lsvResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lsvResult.Name = "lsvResult";
             this.lsvResult.ShowItemToolTips = true;
-            this.lsvResult.Size = new System.Drawing.Size(536, 370);
+            this.lsvResult.Size = new System.Drawing.Size(544, 443);
             this.lsvResult.SmallImageList = this.imageList1;
             this.lsvResult.TabIndex = 2;
             this.lsvResult.UseCompatibleStateImageBehavior = false;
@@ -83,16 +86,18 @@
             // 
             // TspProgress
             // 
-            this.TspProgress.Location = new System.Drawing.Point(21, 58);
+            this.TspProgress.Location = new System.Drawing.Point(21, 70);
+            this.TspProgress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TspProgress.Name = "TspProgress";
-            this.TspProgress.Size = new System.Drawing.Size(501, 23);
+            this.TspProgress.Size = new System.Drawing.Size(501, 28);
             this.TspProgress.TabIndex = 3;
             // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(449, 26);
+            this.BtnReset.Location = new System.Drawing.Point(449, 31);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(75, 24);
+            this.BtnReset.Size = new System.Drawing.Size(75, 29);
             this.BtnReset.TabIndex = 4;
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = true;
@@ -100,16 +105,17 @@
             // 
             // YouTubeSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 475);
+            this.ClientSize = new System.Drawing.Size(554, 573);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.TspProgress);
             this.Controls.Add(this.lsvResult);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "YouTubeSearch";
-            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Text = "YouTubeView";
             this.ResumeLayout(false);
             this.PerformLayout();

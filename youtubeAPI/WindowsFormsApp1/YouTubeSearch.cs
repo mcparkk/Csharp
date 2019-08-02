@@ -1,4 +1,5 @@
-﻿using Google.Apis.Services;
+﻿using DevExpress.XtraEditors;
+using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class YouTubeSearch : Form
+    public partial class YouTubeSearch : XtraForm
     {
        
         public YouTubeSearch()
